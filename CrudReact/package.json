@@ -1,0 +1,25 @@
+{
+  "name": "crudreact",
+  "version": "1.0.0",
+  "description": "```http\r   GET http://rodrigodev.ninja:3000/cliente/${USR_ID}\r ```",
+  "main": "index.js",
+  "scripts": {
+    "scrip": "node server.js",
+    "start": "serve-build",
+    "dev": "npm start --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rodrigojuniorj/CrudReact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rodrigojuniorj/CrudReact/issues"
+  },
+  "homepage": "https://github.com/Rodrigojuniorj/CrudReact#readme",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
