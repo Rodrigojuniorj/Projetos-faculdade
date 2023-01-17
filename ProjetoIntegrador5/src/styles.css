@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/** Tamplate menu side bar lateral */
+.navbar{
+  width: 100%;
+}
+
+.ajusta{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.login{
+  text-align: right;
+  margin-top: 6px;
+}
+
+.login a{
+  color:  #212529;
+  text-decoration: none;
+}
+
+.logo{
+  margin-left: 40px;
+}
+
+.conteudo{
+  padding: 0 40px;
+}

@@ -1,0 +1,37 @@
+
+<div class="container-fluid">
+  <div class="col-md-12">
+    <a href="/listagemcaminhao" class="btn btn-primary">Cadastrar Novo Caminhão</a>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <app-nova-marca [fabricante]="fabricante"></app-nova-marca>
+    </div>
+    <div class="col-md-12" style="margin-top: 20px">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Marca</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fabricante of listaFabricante">
+              <td>
+                {{fabricante.marca}}
+              </td>
+              <td>
+                <div class="row">
+                  <div class="col-md-4">
+                    <button class="btn btn-sm btn-success" (click)="editarMarca(fabricante)">Alterar</button>
+                    <button style="margin-left: 20px;" class="btn btn-sm btn-danger" (click)="excluirFabricante(fabricante)">Remover</button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

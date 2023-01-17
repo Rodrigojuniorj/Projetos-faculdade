@@ -1,0 +1,44 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <app-novo-caminhoneiro [caminhoneiro]="caminhoneiro"></app-novo-caminhoneiro>
+    </div>
+    <div class="col-md-12" style="margin-top: 20px">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>CPF</th>
+            <th>NOME COMPLETO</th>
+            <th>CELULAR</th>
+            <th class="text-center"> </th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let caminhoneiro of listaCaminhoneiro">
+              <td>
+                {{caminhoneiro.cpf}}
+              </td>
+              <td>
+                {{caminhoneiro.nome}}
+              </td>
+              <td>
+                {{caminhoneiro.celular}}
+              </td>
+              <td>
+                <div class="row">
+                  <div class="col-md-4">
+                    <button class="btn btn-sm btn-success" (click)="editarCaminhoneiro(caminhoneiro)">Alterar</button>
+                  </div>
+                  <div class="col-md-4" style="margin-left: 15px;">
+                    <button class="btn btn-sm btn-danger" (click)="excluirCaminhoneiro(caminhoneiro)">Remover</button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
