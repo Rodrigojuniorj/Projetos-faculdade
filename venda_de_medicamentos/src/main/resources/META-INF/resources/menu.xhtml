@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xml:lang="en"
+      lang="en">
+<h:head>
+<style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
+</h:head>
+<h:body>
+<p:menubar style="background-color: #fff">
+    <p:submenu label="Lotes" icon="pi pi-fw pi-th-large">
+        <p:menuitem value="Listar Lotes" icon="pi pi-fw pi-circle-on" url="lote-listar.xhtml"/>
+        <p:menuitem value="Novo Lote" icon="pi pi-fw pi-circle-on" url="lote-novo.xhtml"/>
+    </p:submenu>
+    <p:submenu label="Laboratórios" icon="pi pi-fw pi-desktop">
+        <p:menuitem value="Listar Laboratórios" icon="pi pi-fw pi-circle-on" url="laboratorio-listar.xhtml"/>
+        <p:menuitem value="Novo Laboratório" icon="pi pi-fw pi-circle-on" url="laboratorio-novo.xhtml"/>
+    </p:submenu>
+
+    <p:submenu label="Usuários" icon="pi pi-fw pi-user">
+        <p:menuitem value="Listar Usuários" icon="pi pi-fw pi-circle-on" url="usuario-listar.xhtml"/>
+        <p:menuitem value="Novo Usuário" icon="pi pi-fw pi-circle-on" url="usuario-novo.xhtml"/>
+    </p:submenu>
+    <p:submenu label="Pagamentos" icon="pi pi-fw pi-money-bill">
+        <p:menuitem value="Listar pagamentos" icon="pi pi-fw pi-circle-on" url="pagamento-listar.xhtml"/>
+        <p:menuitem value="Novo pagamento" icon="pi pi-fw pi-circle-on" url="pagamento-novo.xhtml"/>
+    </p:submenu>
+    <p:submenu label="Principios ativos" icon="pi pi-fw pi-star">
+        <p:menuitem value="Listar principios ativos" icon="pi pi-fw pi-circle-on" url="principioativo-listar.xhtml"/>
+        <p:menuitem value="Novo principio ativo" icon="pi pi-fw pi-circle-on" url="principioativo-novo.xhtml"/>
+    </p:submenu>
+    <p:submenu label="Compras" icon="pi pi-fw pi-shopping-cart">
+        <p:menuitem value="Listar compras" icon="pi pi-fw pi-circle-on" url="compra-listar.xhtml"/>
+        <p:menuitem value="Nova compra" icon="pi pi-fw pi-circle-on" url="compra-novo.xhtml"/>
+    </p:submenu>
+    <p:submenu label="Medicamentos" icon="pi pi-fw pi-list">
+        <p:menuitem value="Listar medicamentos" icon="pi pi-fw pi-circle-on" url="medicamento-listar.xhtml"/>
+        <p:menuitem value="Novo medicamento" icon="pi pi-fw pi-circle-on" url="medicamento-novo.xhtml"/>
+    </p:submenu>
+        <p:menuitem value="Sair" icon="pi pi-fw pi-sign-out" actionListener="#{usuarioBean.deslogar}" rendered="#{usuarioBean.logged}"/>
+        <p:menuitem value="Logar" icon="pi pi-fw pi-sign-in" actionListener="#{usuarioBean.logar}" rendered="#{!usuarioBean.logged}"/>
+</p:menubar>
+
+</h:body>
+</html>
